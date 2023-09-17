@@ -1,0 +1,35 @@
+@media (min-width: 992px) {
+	.header {
+		&__txt {
+			font-size: 10rem;
+			letter-spacing: 1em;
+			line-height: 300%;
+			span {
+				color: $grey-color;
+			}
+		}
+		&__desc {
+			font-size: 3rem;
+		}
+	}
+	.about {
+		&__title {
+			padding: 4em 0em;
+			h2 {
+				font-size: 7rem;
+			}
+		}
+		&__desc {
+			padding: 10em 0em;
+			width: 45%;
+		}
+		&__slideOne {
+			&-header {
+				h3 {
+					padding-left: 3em;
+					font-size: 4rem;
+				}
+			}
+		}
+	}
+}
