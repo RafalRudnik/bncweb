@@ -28,6 +28,12 @@ const slideOneDescThreePl =
 const slideOneDescThreeGb =
 	'Accept the project. A well-thought-out website can have a huge impact on the development of your company.';
 
+const slideTwoDescPl =
+	'To tworzenia stron internetowych używam najnowszych technologii takich jak: JavaScript, HTML5, SASS, React, Framer Motion, Apple, VsCode, Node.js, Figma, Adobe.';
+
+const sldieTwoDescGb =
+	'To create websites, I use the latest technologies such as: JavaScript, HTML5, SASS, React, Framer Motion, Apple, VsCode, Node.js, Figma, Adobe.';
+
 export default function AboutSlider({ polish }) {
 	const sectionRef = useRef(null);
 	const triggerRef = useRef(null);
@@ -39,9 +45,9 @@ export default function AboutSlider({ polish }) {
 				translateX: 0,
 			},
 			{
-				translateX: '-2400',
+				translateX: '-190vw',
 				ease: 'none',
-				duration: 1,
+				duration: 4,
 				scrollTrigger: {
 					trigger: triggerRef.current,
 					start: 'top top',
@@ -90,6 +96,22 @@ export default function AboutSlider({ polish }) {
 					</div>
 					<div className='about__scroll-section'>
 						<h2>{polish ? headerTwoPl : headerTwoGb}</h2>
+						<div className='about__slideTwo-main'>
+							<div className='about__slideTwo-desc'>
+								<p>{polish ? slideTwoDescPl : sldieTwoDescGb}</p>
+							</div>
+							<div className='about__slideTwo-img'>
+								<div className='about__slideTwo-img--icons'>
+									<img src='./img/Icon1.png' alt='html icon'></img>
+									<img src='./img/Icon2.png' alt='javascript icon'></img>
+									<img src='./img/Icon3.png' alt='react icon'></img>
+									<img src='./img/Icon4.png' alt='sass icon'></img>
+								</div>
+								<div className='about__slideTwo-img--code'>
+									<img src='./img/code.png' alt='vscode screenshot'></img>
+								</div>
+							</div>
+						</div>
 					</div>
 					<div className='about__scroll-section'>
 						<h2>{polish ? headerThreePl : headerThreeGb}</h2>

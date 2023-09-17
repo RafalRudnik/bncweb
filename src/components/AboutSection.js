@@ -1,6 +1,10 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import SectionHeader from './SectionHeading';
 import AboutSlider from './AboutSlider';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const workPl = '{O nas}';
 const workGb = '{About}';
@@ -75,7 +79,35 @@ function AboutMain({ polish }) {
 }
 
 function AboutTxtBlock({ children }) {
-	return <div className='about__title'>{children}</div>;
+	const titleOne = useRef(null);
+
+	useEffect(function () {
+		const fristTitle = titleOne.current;
+		gsap.fromTo(
+			fristTitle.children,
+			{
+				y: '+=100',
+				opacity: 0,
+			},
+			{
+				y: 0,
+				opacity: 1,
+				duration: 0.5,
+				stagger: 0.3,
+				ease: 'none',
+				scrollTrigger: {
+					trigger: fristTitle,
+					start: 'top 80%',
+					end: 'top 50%',
+				},
+			}
+		);
+	}, []);
+	return (
+		<div className='about__title' ref={titleOne}>
+			{children}
+		</div>
+	);
 }
 
 function AboutTxtDesc({ children }) {

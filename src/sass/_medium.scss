@@ -50,6 +50,8 @@
 			width: 90%;
 			margin: 3em 0em;
 			justify-content: start;
+			border-top: 1px solid $grey-color;
+			border-bottom: 1px solid $grey-color;
 			&-header {
 				width: 40%;
 				h3 {
@@ -62,6 +64,33 @@
 				font-size: 1.6rem;
 				line-height: 168%;
 				padding-right: 3em;
+				width: 60%;
+			}
+		}
+		&__slideTwo-desc {
+			padding: 5em 1em;
+			font-size: 1.6rem;
+			width: 80%;
+		}
+		&__slideTwo-img {
+			flex-wrap: nowrap;
+			padding: 3em 1em;
+			gap: 3em;
+			align-items: center;
+			width: 80%;
+			&--icons {
+				display: flex;
+				flex-wrap: wrap;
+				width: 40%;
+				gap: 2em;
+				img {
+					display: block;
+					width: 50px;
+					height: 50px;
+					filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+				}
+			}
+			&--code {
 				width: 60%;
 			}
 		}
