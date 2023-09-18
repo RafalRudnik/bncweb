@@ -94,5 +94,38 @@
 				width: 60%;
 			}
 		}
+		&__slideThree-main {
+			padding: 8em 0em;
+			font-size: 2rem;
+			font-weight: 200;
+			span {
+				font-size: 20rem;
+				font-weight: 200;
+			}
+		}
+		&__slideThree-desc {
+			font-size: 2rem;
+		}
+
+		&__blackSection {
+			&-main {
+				flex-direction: row;
+				justify-content: center;
+				padding: 5em 0em;
+				h3 {
+					width: 45%;
+					font-size: 3rem;
+				}
+				&--img {
+					width: 40%;
+					margin: 0;
+				}
+			}
+			&-desc {
+				align-self: center;
+				width: 60%;
+				font-size: 1.6rem;
+			}
+		}
 	}
 }

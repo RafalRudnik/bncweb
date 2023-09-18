@@ -34,6 +34,13 @@ const slideTwoDescPl =
 const sldieTwoDescGb =
 	'To create websites, I use the latest technologies such as: JavaScript, HTML5, SASS, React, Framer Motion, Apple, VsCode, Node.js, Figma, Adobe.';
 
+const slideThreeMainPl = 'www.TwojaStrona.pl';
+const slideThreeMainGb = 'www.YourPage.com';
+const slideThreeDescPl = 'Ciesz się swoim miejscem w sieci. Rób karierę,';
+const slideThreeDescTwoPl = ' zarabiaj pieniądze';
+const slideThreeDescGb = 'Enjoy your place on the web. Build a career,';
+const slideThreeDescTwoGb = ' earn money';
+
 export default function AboutSlider({ polish }) {
 	const sectionRef = useRef(null);
 	const triggerRef = useRef(null);
@@ -45,7 +52,7 @@ export default function AboutSlider({ polish }) {
 				translateX: 0,
 			},
 			{
-				translateX: '-190vw',
+				translateX: '-200vw',
 				ease: 'none',
 				duration: 4,
 				scrollTrigger: {
@@ -115,6 +122,21 @@ export default function AboutSlider({ polish }) {
 					</div>
 					<div className='about__scroll-section'>
 						<h2>{polish ? headerThreePl : headerThreeGb}</h2>
+						<div className='about__slideThree-main'>
+							<p>
+								<span>{'['}</span>
+								{polish ? slideThreeMainPl : slideThreeMainGb}
+								<span>{']'}</span>
+							</p>
+						</div>
+						<div className='about__slideThree-desc'>
+							<p>
+								{polish ? slideThreeDescPl : slideThreeDescGb}
+								<span>
+									{polish ? slideThreeDescTwoPl : slideThreeDescTwoGb}
+								</span>
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>

@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import SectionHeader from './SectionHeading';
@@ -34,17 +34,35 @@ const howDescGb = 'to create';
 const howWebPl = 'stronę internetową?';
 const howWebGb = 'a website?';
 
+const aboutBlackTitlePl = 'Klienci kupują';
+const aboutBlackTitleTwoPl = 'oczami...';
+const aboutBlackTitleGb = 'Customers buy with';
+const aboutBlackTitleTwoGb = 'their eyes...';
+
+const aboutBlackMainPl =
+	'Według badań odwiedzający strony nie czytają nadmiaru treści.';
+const aboutBlackMainGb =
+	'According to research, website visitors do not read excessive content.';
+
+const aboutBlackDescPl =
+	'Strony przeładowane treścią i nadmiarem szczegółów dotyczących oferty, nie są czytane przez odwiedzających. Wg. badań odwiedzający strony koncentrują się na nagłówkach i oprawie wizualnej. ';
+
+const aboutBlackDescGb =
+	'Pages overloaded with content and too many details about the offer are not read by visitors. According to research, website visitors focus on headings and visuals.';
+
 export default function AboutSection({ polish }) {
 	return (
 		<section className='about' id='about'>
 			<AboutMain polish={polish} />
+			<AboutBlackSection polish={polish} />
 		</section>
 	);
 }
 
 function AboutMain({ polish }) {
+
 	return (
-		<div className='about__main about__main-dark'>
+		<div className='about__main'>
 			<div className='about__wrapper'>
 				<SectionHeader>{polish ? workPl : workGb}</SectionHeader>
 				<AboutTxtBlock>
@@ -114,6 +132,28 @@ function AboutTxtDesc({ children }) {
 	return (
 		<div className='about__desc'>
 			<p>{children}</p>
+		</div>
+	);
+}
+
+function AboutBlackSection({ polish }) {
+	return (
+		<div className='about__blackSection'>
+			<div className='about__wrapper'>
+				<AboutTxtBlock>
+					<h2>{polish ? aboutBlackTitlePl : aboutBlackTitleGb}</h2>
+					<h2>{polish ? aboutBlackTitleTwoPl : aboutBlackTitleTwoGb}</h2>
+				</AboutTxtBlock>
+				<div className='about__blackSection-main'>
+					<h3>{polish ? aboutBlackMainPl : aboutBlackMainGb}</h3>
+					<div className='about__blackSection-main--img'>
+						<img src='./img/eye.jpg' alt='eye'></img>
+					</div>
+				</div>
+				<div className='about__blackSection-desc'>
+					<p>{polish ? aboutBlackDescPl : aboutBlackDescGb}</p>
+				</div>
+			</div>
 		</div>
 	);
 }

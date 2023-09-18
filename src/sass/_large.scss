@@ -24,6 +24,14 @@
 			width: 45%;
 		}
 		&__slideOne {
+			position: relative;
+			overflow: hidden;
+			transition: background-color 0.3s, color 0.3s;
+
+			&:hover {
+				background-color: $grey-color;
+				color: $secondary;
+			}
 			&-header {
 				h3 {
 					padding-left: 3em;
@@ -35,6 +43,31 @@
 			width: 100%;
 			&--code {
 				width: 500px;
+			}
+		}
+		&__slideThree-main {
+			padding: 4em 0em;
+			font-size: 3rem;
+			font-weight: 200;
+			span {
+				font-size: 30rem;
+				font-weight: 200;
+			}
+		}
+		&__slideThree-desc {
+			padding-top: 2em;
+			font-size: 3rem;
+		}
+		&__blackSection {
+			&-main {
+				padding: 6em 0em;
+				h3 {
+					font-size: 6rem;
+				}
+			}
+			&-desc {
+				padding: 4em 0em;
+				width: 50%;
 			}
 		}
 	}

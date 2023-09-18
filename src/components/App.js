@@ -36,19 +36,18 @@ function App() {
 		lenis.raf(time);
 		requestAnimationFrame(raf);
 	}
+	requestAnimationFrame(raf);
 
 	function handleLanguage() {
 		setPolish((polish) => !polish);
 	}
-
-	requestAnimationFrame(raf);
 
 	return (
 		<div className='app'>
 			<Navbar handleLanguage={handleLanguage} />
 			<Menu polish={polish} />
 			<Header />
-			<AboutSection polish={polish}/>
+			<AboutSection polish={polish} />
 		</div>
 	);
 }
