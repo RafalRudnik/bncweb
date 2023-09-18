@@ -4,9 +4,17 @@ import Navbar from './Navbar';
 import Menu from './Menu';
 import Header from './Header';
 import AboutSection from './AboutSection';
+import ContactSection from './ContactSection';
 
 function App() {
 	const [polish, setPolish] = useState(true);
+	const [light, setLight] = useState(true);
+	const [mask, setMask] = useState(false);
+
+	function handleDarkMode() {
+		setLight((light) => !light);
+		setMask((mask) => !mask);
+	}
 
 	// if (window.innerWidth > 992) {
 	// 	const lenis = new Lenis({
@@ -47,7 +55,12 @@ function App() {
 			<Navbar handleLanguage={handleLanguage} />
 			<Menu polish={polish} />
 			<Header />
-			<AboutSection polish={polish} />
+			<AboutSection
+				polish={polish}
+				light={light}
+				handleDarkMode={handleDarkMode}
+			/>
+			<ContactSection polish={polish} mask={mask}/>
 		</div>
 	);
 }

@@ -71,4 +71,25 @@
 			}
 		}
 	}
+	.contact {
+		&__title {
+			padding: 10em 0em;
+			h2 {
+				font-size: 7rem;
+			}
+		}
+		&__info {
+			gap: 2em;
+			&-img {
+				width: 150px;
+			}
+			&-txt {
+				font-size: 7rem;
+				padding-bottom: 0.5em;
+			}
+		}
+		&__main-dark {
+			display: flex;
+		}
+	}
 }

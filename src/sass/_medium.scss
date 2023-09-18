@@ -129,4 +129,22 @@
 			}
 		}
 	}
+	.contact {
+		&__title {
+			padding: 6em 0em;
+			h2 {
+				font-size: 4rem;
+				line-height: 95%;
+			}
+		}
+		&__info {
+			gap: 2em;
+			&-img {
+				width: 150px;
+			}
+			&-txt {
+				font-size: 4rem;
+			}
+		}
+	}
 }

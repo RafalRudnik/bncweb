@@ -50,19 +50,25 @@ const aboutBlackDescPl =
 const aboutBlackDescGb =
 	'Pages overloaded with content and too many details about the offer are not read by visitors. According to research, website visitors focus on headings and visuals.';
 
-export default function AboutSection({ polish }) {
+export default function AboutSection({ polish, light, handleDarkMode }) {
 	return (
 		<section className='about' id='about'>
-			<AboutMain polish={polish} />
+			<AboutMain
+				polish={polish}
+				light={light}
+				handleDarkMode={handleDarkMode}
+			/>
 			<AboutBlackSection polish={polish} />
 		</section>
 	);
 }
 
-function AboutMain({ polish }) {
-
+function AboutMain({ polish, light, handleDarkMode }) {
 	return (
-		<div className='about__main'>
+		<div className={`about__main ${!light ? 'main_dark' : ''}`}>
+			<button onClick={handleDarkMode} className='btnDark'>
+				{light ? 'Dark' : 'Light'}
+			</button>
 			<div className='about__wrapper'>
 				<SectionHeader>{polish ? workPl : workGb}</SectionHeader>
 				<AboutTxtBlock>
