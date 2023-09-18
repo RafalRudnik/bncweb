@@ -203,7 +203,6 @@ html.lenis {
 	}
 	&__scroll-outer {
 		overflow: hidden;
-		width: 100%;
 	}
 	&__scroll-inner {
 		display: flex;
@@ -216,6 +215,9 @@ html.lenis {
 		flex-direction: column;
 		height: 100vh;
 		width: 100vw;
+		.about__wrapper {
+			padding: 0;
+		}
 		h2 {
 			padding-top: 5em;
 			font-weight: 400;
@@ -223,6 +225,7 @@ html.lenis {
 	}
 	&__slideOne {
 		display: flex;
+		flex-wrap: wrap;
 		align-self: center;
 		align-items: center;
 		gap: 1em;
@@ -238,7 +241,7 @@ html.lenis {
 		}
 		&-desc {
 			font-size: 1rem;
-			width: 68%;
+			width: 65%;
 		}
 	}
 	&__slideTwo-main {
@@ -282,6 +285,7 @@ html.lenis {
 		}
 	}
 	&__slideThree-main {
+		align-self: center;
 		width: 100%;
 		padding: 6em 0em;
 		text-align: center;
@@ -291,7 +295,8 @@ html.lenis {
 		}
 	}
 	&__slideThree-desc {
-		width: 100%;
+		align-self: center;
+		width: 80%;
 		text-align: center;
 		span {
 			color: $grey-color;

@@ -75,67 +75,75 @@ export default function AboutSlider({ polish }) {
 			<div ref={triggerRef}>
 				<div ref={sectionRef} className='about__scroll-inner'>
 					<div className='about__scroll-section'>
-						<h2>{polish ? headerOnePl : headerOneGb}</h2>
-						<div className='about__slideOne'>
-							<div className='about__slideOne-header'>
-								<h3>{polish ? slideOneTitleOnePl : slideOneTitleOneGb}</h3>
-							</div>
-							<div className='about__slideOne-desc'>
-								<p>{polish ? slideOneDescOnePl : slideOneDescOneGb}</p>
-							</div>
-						</div>
-						<div className='about__slideOne'>
-							<div className='about__slideOne-header'>
-								<h3>{polish ? slideOneTitleTwoPl : slideOneTitleTwoGb}</h3>
-							</div>
-							<div className='about__slideOne-desc'>
-								<p>{polish ? slideOneDescTwoPl : slideOneDescTwoGb}</p>
-							</div>
-						</div>
-						<div className='about__slideOne'>
-							<div className='about__slideOne-header'>
-								<h3>{polish ? slideOneTitleThreePl : slideOneTitleThreeGb}</h3>
-							</div>
-							<div className='about__slideOne-desc'>
-								<p>{polish ? slideOneDescThreePl : slideOneDescThreeGb}</p>
-							</div>
-						</div>
-					</div>
-					<div className='about__scroll-section'>
-						<h2>{polish ? headerTwoPl : headerTwoGb}</h2>
-						<div className='about__slideTwo-main'>
-							<div className='about__slideTwo-desc'>
-								<p>{polish ? slideTwoDescPl : sldieTwoDescGb}</p>
-							</div>
-							<div className='about__slideTwo-img'>
-								<div className='about__slideTwo-img--icons'>
-									<img src='./img/Icon1.png' alt='html icon'></img>
-									<img src='./img/Icon2.png' alt='javascript icon'></img>
-									<img src='./img/Icon3.png' alt='react icon'></img>
-									<img src='./img/Icon4.png' alt='sass icon'></img>
+						<div className='about__wrapper'>
+							<h2>{polish ? headerOnePl : headerOneGb}</h2>
+							<div className='about__slideOne'>
+								<div className='about__slideOne-header'>
+									<h3>{polish ? slideOneTitleOnePl : slideOneTitleOneGb}</h3>
 								</div>
-								<div className='about__slideTwo-img--code'>
-									<img src='./img/code.png' alt='vscode screenshot'></img>
+								<div className='about__slideOne-desc'>
+									<p>{polish ? slideOneDescOnePl : slideOneDescOneGb}</p>
+								</div>
+							</div>
+							<div className='about__slideOne'>
+								<div className='about__slideOne-header'>
+									<h3>{polish ? slideOneTitleTwoPl : slideOneTitleTwoGb}</h3>
+								</div>
+								<div className='about__slideOne-desc'>
+									<p>{polish ? slideOneDescTwoPl : slideOneDescTwoGb}</p>
+								</div>
+							</div>
+							<div className='about__slideOne'>
+								<div className='about__slideOne-header'>
+									<h3>
+										{polish ? slideOneTitleThreePl : slideOneTitleThreeGb}
+									</h3>
+								</div>
+								<div className='about__slideOne-desc'>
+									<p>{polish ? slideOneDescThreePl : slideOneDescThreeGb}</p>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div className='about__scroll-section'>
-						<h2>{polish ? headerThreePl : headerThreeGb}</h2>
-						<div className='about__slideThree-main'>
-							<p>
-								<span>{'['}</span>
-								{polish ? slideThreeMainPl : slideThreeMainGb}
-								<span>{']'}</span>
-							</p>
+						<div className='about__wrapper'>
+							<h2>{polish ? headerTwoPl : headerTwoGb}</h2>
+							<div className='about__slideTwo-main'>
+								<div className='about__slideTwo-desc'>
+									<p>{polish ? slideTwoDescPl : sldieTwoDescGb}</p>
+								</div>
+								<div className='about__slideTwo-img'>
+									<div className='about__slideTwo-img--icons'>
+										<img src='./img/Icon1.png' alt='html icon'></img>
+										<img src='./img/Icon2.png' alt='javascript icon'></img>
+										<img src='./img/Icon3.png' alt='react icon'></img>
+										<img src='./img/Icon4.png' alt='sass icon'></img>
+									</div>
+									<div className='about__slideTwo-img--code'>
+										<img src='./img/code.png' alt='vscode screenshot'></img>
+									</div>
+								</div>
+							</div>
 						</div>
-						<div className='about__slideThree-desc'>
-							<p>
-								{polish ? slideThreeDescPl : slideThreeDescGb}
-								<span>
-									{polish ? slideThreeDescTwoPl : slideThreeDescTwoGb}
-								</span>
-							</p>
+					</div>
+					<div className='about__scroll-section'>
+						<div className='about__wrapper'>
+							<h2>{polish ? headerThreePl : headerThreeGb}</h2>
+							<div className='about__slideThree-main'>
+								<p>
+									<span>{'['}</span>
+									{polish ? slideThreeMainPl : slideThreeMainGb}
+									<span>{']'}</span>
+								</p>
+							</div>
+							<div className='about__slideThree-desc'>
+								<p>
+									{polish ? slideThreeDescPl : slideThreeDescGb}
+									<span>
+										{polish ? slideThreeDescTwoPl : slideThreeDescTwoGb}
+									</span>
+								</p>
+							</div>
 						</div>
 					</div>
 				</div>
