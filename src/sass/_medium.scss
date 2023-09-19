@@ -129,6 +129,12 @@
 			}
 		}
 	}
+	.work {
+		&__title,
+		&__slider-slide {
+			font-size: 3rem;
+		}
+	}
 	.contact {
 		&__title {
 			padding: 6em 0em;

@@ -370,6 +370,67 @@ html.lenis {
 	}
 }
 
+.work {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	padding: 8em 0em;
+	background-color: $primary;
+	color: $secondary;
+
+	&__slider {
+		position: relative;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		overflow: hidden;
+		&:hover .work__slider-slide {
+			transform: scaleY(1);
+		}
+	}
+	&__sliderOne {
+		margin-top: 8em;
+		border-top: 1px solid $secondary;
+	}
+	&__sliderTwo,
+	&__sliderThree {
+		border-top: 1px solid $secondary;
+	}
+	&__sliderThree {
+		border-bottom: 1px solid $secondary;
+	}
+	&__title,
+	&__slider-slide {
+		padding: 2em 1em;
+		font-size: 2rem;
+	}
+	&__slider-slide {
+		position: absolute;
+		top: 0;
+		display: flex;
+		width: 100%;
+		transform-origin: center;
+		overflow: hidden;
+		background-color: $secondary;
+		color: $primary;
+		transform: scaleY(0);
+		transition: transform 0.4s;
+	}
+	&__slider-slide-one,
+	&__slider-slide-two {
+		white-space: nowrap;
+		letter-spacing: 4px;
+	}
+	&__slider-slide-one {
+		animation: fromRightToLeft 11.5s infinite linear;
+	}
+	&__slider-slide-two {
+		animation: fromRightToLeftTwo 11.5s infinite linear;
+	}
+}
+
 .contact {
 	position: relative;
 	display: flex;

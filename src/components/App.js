@@ -5,6 +5,7 @@ import Menu from './Menu';
 import Header from './Header';
 import AboutSection from './AboutSection';
 import ContactSection from './ContactSection';
+import WorkSection from './WorkSection';
 
 function App() {
 	const [polish, setPolish] = useState(true);
@@ -60,7 +61,8 @@ function App() {
 				light={light}
 				handleDarkMode={handleDarkMode}
 			/>
-			<ContactSection polish={polish} mask={mask}/>
+			<WorkSection polish={polish} />
+			<ContactSection polish={polish} mask={mask} />
 		</div>
 	);
 }

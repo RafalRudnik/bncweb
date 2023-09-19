@@ -71,6 +71,23 @@
 			}
 		}
 	}
+	.work {
+		&__title,
+		&__slider-slide {
+			font-size: 4rem;
+		}
+		&__slider-slide {
+			display: flex;
+			width: 100%;
+			overflow: hidden;
+			background-color: $secondary;
+			color: $primary;
+		}
+		&__slider-slide-one,
+		&__slider-slide-two {
+			padding: 0em 0.5em;
+		}
+	}
 	.contact {
 		&__title {
 			padding: 10em 0em;
