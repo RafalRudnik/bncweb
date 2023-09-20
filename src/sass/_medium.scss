@@ -134,10 +134,21 @@
 		&__slider-slide {
 			font-size: 3rem;
 		}
+		&__img {
+			width: 100%;
+			border-radius: 20px;
+			overflow: hidden;
+			img {
+				border-radius: 20px;
+				width: 100%;
+				object-fit: cover;
+				object-position: center;
+			}
+		}
 	}
 	.contact {
 		&__title {
-			padding: 6em 0em;
+			padding: 10em 0em;
 			h2 {
 				font-size: 4rem;
 				line-height: 95%;
@@ -151,6 +162,12 @@
 			&-txt {
 				font-size: 4rem;
 			}
+		}
+	}
+	.footer {
+		&__main {
+			padding: 2em 0em;
+			font-size: 1.6rem;
 		}
 	}
 }

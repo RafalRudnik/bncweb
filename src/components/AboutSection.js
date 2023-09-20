@@ -6,7 +6,7 @@ import AboutSlider from './AboutSlider';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const workPl = '{O nas}';
+const workPl = '{O mnie}';
 const workGb = '{About}';
 const headerDevelopPl = 'Tworzenie i';
 const headerDevelopGb = 'Website';
@@ -15,17 +15,17 @@ const headerDesignGb = 'creation';
 const headerWebPl = 'stron internetowych';
 const headerWebGb = 'and design';
 const headerDescOnePl =
-	'Zajmujemy się profesjonalnym projektowaniem i wykonaniem responsywnych stron internetowych z zachowaniem zasady mobile-first. Swoim klientom dajemy szansę dotarcia do większej rzeszy odbiorców. Zareklamowania siebie i swojej firmy w internecie poprzez unikalny, nowoczesny projekt.';
+	'Zajmuję się profesjonalnym projektowaniem i wykonaniem responsywnych stron internetowych z zachowaniem zasady mobile-first. Swoim klientom daję szansę dotarcia do większej rzeszy odbiorców. Zareklamowania siebie i swojej firmy w internecie poprzez unikalny, nowoczesny projekt.';
 const headerDescOneGb =
-	'We deal with professional design and implementation of responsive websites websites with the mobile-first principle. We give our clients a chance reaching a larger audience. Advertise yourself and your business in online through a unique, modern design.';
+	'I deal with professional design and implementation of responsive websites websites with the mobile-first principle. I give our clients a chance reaching a larger audience. Advertise yourself and your business in online through a unique, modern design.';
 
 const engagementPl = 'Zaangażowanie';
 const engagementGb = 'Engagement';
 
 const engagementDescPl =
-	'W każdy projekt wkładamy czas i pasję. Każdy projekt jest dopracowany, liczy się każdy szczegół. Oferujemy pełne wsparcie, od projektu poprzez wykonanie i późniejszą obsługę. Aktualizacje treści, design, hosting etc.';
+	'W każdy projekt wkładam czas i pasję. Każdy projekt jest dopracowany, liczy się każdy szczegół. Oferuję pełne wsparcie, od projektu poprzez wykonanie i późniejszą obsługę. Aktualizacje treści, design, hosting etc.';
 const engagementDescGb =
-	'We put time and passion into each project. Every project is refined, it counts every detail. We offer full support, from design through execution and subsequent service. Content updates, design, hosting, etc.';
+	'I put time and passion into each project. Every project is refined, it counts every detail. I offer full support, from design through execution and subsequent service. Content updates, design, hosting, etc.';
 
 const howPl = 'Jak';
 const howGb = 'How';
@@ -143,6 +143,21 @@ function AboutTxtDesc({ children }) {
 }
 
 function AboutBlackSection({ polish }) {
+	const imgClip = useRef(null);
+
+	useEffect(function () {
+		const image = imgClip.current;
+		gsap.to(image, {
+			duration: 1,
+			'--clip': '100%',
+			ease: 'none',
+			scrollTrigger: {
+				trigger: image,
+				start: 'top 80%',
+			},
+		});
+	}, []);
+
 	return (
 		<div className='about__blackSection'>
 			<div className='about__wrapper'>
@@ -152,7 +167,7 @@ function AboutBlackSection({ polish }) {
 				</AboutTxtBlock>
 				<div className='about__blackSection-main'>
 					<h3>{polish ? aboutBlackMainPl : aboutBlackMainGb}</h3>
-					<div className='about__blackSection-main--img'>
+					<div className='about__blackSection-main--img' ref={imgClip}>
 						<img src='./img/eye.jpg' alt='eye'></img>
 					</div>
 				</div>

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Lenis from '@studio-freight/lenis';
 import Navbar from './Navbar';
 import Menu from './Menu';
@@ -6,6 +6,7 @@ import Header from './Header';
 import AboutSection from './AboutSection';
 import ContactSection from './ContactSection';
 import WorkSection from './WorkSection';
+import Footer from './Footer';
 
 function App() {
 	const [polish, setPolish] = useState(true);
@@ -35,17 +36,19 @@ function App() {
 	// 	requestAnimationFrame(raf);
 	// }
 
-	const lenis = new Lenis();
+	useEffect(function () {
+		const lenis = new Lenis();
 
-	lenis.on('scroll', (e) => {
-		console.log(e);
-	});
+		lenis.on('scroll', (e) => {
+			console.log(e);
+		});
 
-	function raf(time) {
-		lenis.raf(time);
+		function raf(time) {
+			lenis.raf(time);
+			requestAnimationFrame(raf);
+		}
 		requestAnimationFrame(raf);
-	}
-	requestAnimationFrame(raf);
+	}, []);
 
 	function handleLanguage() {
 		setPolish((polish) => !polish);
@@ -63,6 +66,7 @@ function App() {
 			/>
 			<WorkSection polish={polish} />
 			<ContactSection polish={polish} mask={mask} />
+			<Footer polish={polish} />
 		</div>
 	);
 }

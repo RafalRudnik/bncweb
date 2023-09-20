@@ -328,6 +328,8 @@ html.lenis {
 				overflow: hidden;
 				width: 200px;
 				margin: 2em;
+				--clip: 10%;
+				clip-path: circle(var(--clip));
 				img {
 					width: 100%;
 					object-fit: cover;
@@ -375,7 +377,7 @@ html.lenis {
 	flex-direction: column;
 	align-items: center;
 	width: 100%;
-	padding: 8em 0em;
+	padding-top: 8em;
 	background-color: $primary;
 	color: $secondary;
 
@@ -427,7 +429,42 @@ html.lenis {
 		animation: fromRightToLeft 11.5s infinite linear;
 	}
 	&__slider-slide-two {
-		animation: fromRightToLeftTwo 11.5s infinite linear;
+		animation: fromRightToLeft 11.5s infinite linear;
+	}
+	&__sliderTwo {
+		.work__slider-slide-one,
+		.work__slider-slide-two {
+			animation: fromLeftToRight 21.5s infinite linear;
+		}
+	}
+	&__paralax {
+		display: flex;
+		justify-content: space-around;
+		margin-top: 8em;
+		width: 100%;
+		overflow: hidden;
+		height: 100vh;
+	}
+	&__paralax-one,
+	&__paralax-two,
+	&__paralax-three {
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+		width: 32%;
+		height: fit-content;
+		overflow-y: hidden;
+	}
+	&__img {
+		width: 100%;
+		border-radius: 10px;
+		overflow: hidden;
+		img {
+			border-radius: 10px;
+			width: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
 	}
 }
 
@@ -442,7 +479,7 @@ html.lenis {
 		flex-direction: column;
 		align-items: center;
 		width: 100%;
-		padding: 8em 0em;
+		padding: 10em 0em;
 		background-color: $secondary;
 		color: $primary;
 	}
@@ -492,6 +529,30 @@ html.lenis {
 	clip-path: circle(200% at 100% 100%);
 	transition: clip-path 1.3s;
 	transition-timing-function: cubic-bezier(1, -0.01, 0.01, 0.99);
+}
+
+.footer {
+	display: flex;
+	justify-content: center;
+	padding: 4em 0em;
+	width: 100%;
+	background-color: $primary;
+	color: $secondary;
+	&__main {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 2em;
+		font-size: 1rem;
+		a {
+			color: $secondary;
+			text-decoration: none;
+			transition: opacity 0.4s;
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+	}
 }
 
 @import './medium';

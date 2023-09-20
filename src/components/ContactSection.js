@@ -2,6 +2,8 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import SectionHeader from './SectionHeading';
 
+
+
 const contactPl = '{Kontakt}';
 const contactGb = '{Contact}';
 const contactTitleSpanPl = 'Zróbmy ';

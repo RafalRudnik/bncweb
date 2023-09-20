@@ -1,6 +1,6 @@
 export default function Navbar({ handleLanguage }) {
 	return (
-		<div className='nav'>
+		<div className='nav' id='home'>
 			<div className='logo'>
 				<p>
 					{'{'}
