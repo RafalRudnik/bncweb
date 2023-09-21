@@ -24,7 +24,7 @@ export default function Footer({ polish }) {
 				<a href='https://rafal-rudnik.com/' target='_blank' rel='noreferrer'>
 					{bnc}
 				</a>
-				<a href='#home'>
+				<a href='#home' onclick="lenis.scrollTo('#home')">
 					<i class='ti ti-home-up'></i>
 				</a>
 			</div>

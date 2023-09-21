@@ -13,8 +13,12 @@ export default function Menu({ polish }) {
 					<a href='#about' onclick="lenis.scrollTo('#about')">
 						{polish ? aboutPl : aboutGb}
 					</a>
-					<a href='#work'>{polish ? workPl : workGb}</a>
-					<a href='#contact'>{polish ? contactPl : contactGb}</a>
+					<a href='#work' onclick="lenis.scrollTo('#work')">
+						{polish ? workPl : workGb}
+					</a>
+					<a href='#contact' onclick="lenis.scrollTo('#contact')">
+						{polish ? contactPl : contactGb}
+					</a>
 				</li>
 			</ul>
 		</div>
