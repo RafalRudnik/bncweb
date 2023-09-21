@@ -82,13 +82,13 @@ html.lenis {
 }
 
 .menu {
-	width: 100%;
 	position: fixed;
 	top: 0;
 	left: 50%;
 	transform: translateX(-50%);
 	display: flex;
 	justify-content: center;
+	width: 100%;
 	background-color: $primaryTrans;
 	z-index: 100;
 	&__list {
@@ -540,7 +540,7 @@ html.lenis {
 .footer {
 	display: flex;
 	justify-content: center;
-	padding: 4em 0em;
+	padding: 4em 1em;
 	width: 100%;
 	background-color: $primary;
 	color: $secondary;
@@ -549,7 +549,8 @@ html.lenis {
 		flex-wrap: wrap;
 		justify-content: center;
 		gap: 2em;
-		font-size: 1rem;
+		font-size: 1.2rem;
+		padding-bottom: 3em;
 		a {
 			color: $secondary;
 			text-decoration: none;
