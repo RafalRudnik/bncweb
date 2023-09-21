@@ -93,58 +93,98 @@ function WorkParalax({ polish }) {
 	const mainSlide = useRef(null);
 
 	useEffect(function () {
-		gsap.fromTo(
-			slideMiddle.current,
-			{
-				y: 0,
-			},
-			{
-				y: '-=200',
-				duration: 20,
-				ease: 'easeInOut',
-				scrollTrigger: {
-					trigger: mainSlide.current,
-					start: 'top 80%',
-					end: 'bottom -2000',
-					scrub: true,
+		if (window.innerWidth > 992) {
+			gsap.fromTo(
+				slideMiddle.current,
+				{
+					y: 0,
 				},
-			}
-		);
+				{
+					y: '-=500',
+					duration: 20,
+					ease: 'easeInOut',
+					scrollTrigger: {
+						trigger: mainSlide.current,
+						start: 'top 80%',
+						end: 'bottom -2000',
+						scrub: true,
+					},
+				}
+			);
+		} else {
+			gsap.fromTo(
+				slideMiddle.current,
+				{
+					y: 0,
+				},
+				{
+					y: '-=200',
+					duration: 20,
+					ease: 'easeInOut',
+					scrollTrigger: {
+						trigger: mainSlide.current,
+						start: 'top 80%',
+						end: 'bottom -2000',
+						scrub: true,
+					},
+				}
+			);
+		}
 	}, []);
 	useEffect(function () {
-		gsap.fromTo(
-			slideLeft.current,
-			{
-				y: '-=700',
-			},
-			{
-				y: '+=900',
-				duration: 20,
-				ease: 'easeInOut',
-				scrollTrigger: {
-					trigger: mainSlide.current,
-					start: 'top 100%',
-					end: 'bottom -600',
-					scrub: true,
+		if (window.innerWidth > 992) {
+			gsap.fromTo(
+				slideLeft.current,
+				{
+					y: '-30%',
 				},
-			}
-		);
+				{
+					y: '-15%',
+					duration: 20,
+					ease: 'easeInOut',
+					scrollTrigger: {
+						trigger: mainSlide.current,
+						start: 'top 100%',
+						end: 'bottom -600',
+						scrub: true,
+					},
+				}
+			);
+		} else {
+			gsap.fromTo(
+				slideLeft.current,
+				{
+					y: '-20%',
+				},
+				{
+					y: '+15%',
+					duration: 20,
+					ease: 'easeInOut',
+					scrollTrigger: {
+						trigger: mainSlide.current,
+						start: 'top 100%',
+						end: 'bottom -600',
+						scrub: true,
+					},
+				}
+			);
+		}
 	}, []);
 	useEffect(function () {
 		if (window.innerWidth > 992) {
 			gsap.fromTo(
 				slideRight.current,
 				{
-					y: '-=300',
+					y: '-60%',
 				},
 				{
-					y: '+=600',
+					y: '+70%',
 					duration: 10,
 					ease: 'easeInOut',
 					scrollTrigger: {
 						trigger: mainSlide.current,
 						start: 'top 90%',
-						end: 'bottom -1200',
+						end: 'bottom -2000',
 						scrub: true,
 					},
 				}
@@ -153,10 +193,10 @@ function WorkParalax({ polish }) {
 			gsap.fromTo(
 				slideRight.current,
 				{
-					y: '-=400',
+					y: '-10%',
 				},
 				{
-					y: '+=900',
+					y: '+=200',
 					duration: 10,
 					ease: 'easeInOut',
 					scrollTrigger: {
@@ -178,6 +218,9 @@ function WorkParalax({ polish }) {
 				</div>
 				<div className='work__img'>
 					<img src='./img/01-02.png' alt='work example'></img>
+				</div>
+				<div className='work__img'>
+					<img src='./img/01-03.png' alt='work example'></img>
 				</div>
 			</div>
 			<div className='work__paralax-two' ref={slideMiddle}>

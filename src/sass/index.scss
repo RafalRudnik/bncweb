@@ -455,6 +455,9 @@ html.lenis {
 		height: fit-content;
 		overflow-y: hidden;
 	}
+	&__paralax-three {
+		transform: translateY(-30%);
+	}
 	&__img {
 		width: 100%;
 		border-radius: 10px;
