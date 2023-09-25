@@ -47,7 +47,8 @@
 			}
 		}
 		&__slideOne {
-			flex-wrap: nowrap;
+			flex-direction: row;
+			align-items: center;
 			width: 90%;
 			margin: 3em 0em;
 			justify-content: start;

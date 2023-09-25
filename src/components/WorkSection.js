@@ -11,8 +11,8 @@ const workPl = [
 	'Indywidualne podejście zapewnia klientowi unikalny design ',
 	'Dbałość o detale',
 	'Zależy mi na tym, aby klient był w pełni zadowolony z wykonanej przez nas usługi. Nie ma znaczenia czy zlecenie jest duże, czy małe ',
-	'Indywidualne podejście',
-	'Indywidualne podejście zapewnia klientowi unikalny design ',
+	'Serwis po produkcyjny',
+	'Zapewniam serwis i opiekę nad stroną internetową. Uaktualnienia, aktualności i więcej... ',
 ];
 const workGb = [
 	'{Work}',
@@ -20,8 +20,8 @@ const workGb = [
 	'An individual approach provides the client with a unique design ',
 	'Attention to details',
 	'It is important to me that the client is fully satisfied with the service we provide. It doesn`t matter whether the order is large or small ',
-	'Individual approach',
-	'An individual approach provides the client with a unique design ',
+	'Post-production service',
+	'I provide service and maintenance of the website. Updates, news and more... ',
 ];
 
 export default function WorkSection({ polish }) {
