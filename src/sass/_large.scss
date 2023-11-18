@@ -23,11 +23,22 @@
 			padding: 10em 0em;
 			width: 45%;
 		}
+		&__scroll-section {
+			border: 1px solid red;
+			padding-top: 0;
+			h2 {
+				font-size: 3rem;
+				padding-top: 1em;
+			}
+		}
+		&__wrapper {
+			justify-content: center;
+		}
 		&__slideOne {
 			position: relative;
 			overflow: hidden;
 			transition: background-color 0.3s, color 0.3s;
-
+			justify-content: flex-start;
 			&:hover {
 				background-color: $grey-color;
 				color: $secondary;
@@ -35,18 +46,21 @@
 			&-header {
 				h3 {
 					padding-left: 3em;
-					font-size: 4rem;
+					font-size: 2rem;
 				}
 			}
+		}
+		&__slideTwo-desc {
+			padding: 1em 0em;
 		}
 		&__slideTwo-img {
 			width: 100%;
 			&--code {
-				width: 500px;
+				width: 40%;
 			}
 		}
 		&__slideThree-main {
-			padding: 4em 0em;
+			padding: 1em 0em;
 			font-size: 3rem;
 			font-weight: 200;
 			span {

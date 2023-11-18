@@ -11,26 +11,26 @@ const footerGb = 'made and design by';
 const bnc = '{BNC} Rafał Rudnik';
 
 export default function Footer({ polish }) {
-	const [currDate, setCurrDate] = useState('');
+	// const [currDate, setCurrDate] = useState('');
 
 	function handleHomeLink(e) {
 		e.preventDefault();
 		gsap.to(window, { duration: 1, scrollTo: { y: '#home', offsetY: 0 } });
 	}
 
-	useEffect(function () {
-		const handleCurrentYear = () => {
-			const year = new Date().getFullYear();
-			setCurrDate(year);
-		};
-		handleCurrentYear();
-	}, []);
+	// useEffect(function () {
+	// 	const handleCurrentYear = () => {
+	// 		const year = new Date().getFullYear();
+	// 		setCurrDate(year);
+	// 	};
+	// 	handleCurrentYear();
+	// }, []);
 
 	return (
 		<footer className='footer'>
 			<div className='footer__main'>
 				<p>
-					&copy; {currDate} {polish ? footerPl : footerGb}
+					&copy; {new Date().getFullYear()} {polish ? footerPl : footerGb}
 				</p>
 				<a href='https://rafal-rudnik.com/' target='_blank' rel='noreferrer'>
 					{bnc}
